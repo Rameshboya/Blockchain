@@ -1,0 +1,29 @@
+<html>
+<head>
+<body>
+<form action="/my-handling-form-page" method="post">
+<body bgcolor="#FFA500">
+<center>
+<h1><p>  <B><i>LeedsCoin Retailer</i></B></p></h1>
+<br></br>
+<div>
+   <label for="name">Customer Id</label> :  0x6960F8F9b77A23b30F1e04350901A6426A72aFE9
+ </div>
+ <br></br>
+ <div>
+   <h2><label for="msg">Select your action</label></h2>
+  </div>
+<br></br>
+ <button onclick="contract.mint(to, 2, 1, console.log);" type="button"> Issue Token</button>
+ <br>
+ <br></br>
+ <button onclick="contract.getBalance(2, console.log);" type="button"> Redeem Token</button>
+ <br></br>
+ <center>
+</form>
+</body>
+<script src="contract.js"></script>
+<script>
+const to = "0x6960F8F9b77A23b30F1e04350901A6426A72aFE9";
+</script>
+</html>

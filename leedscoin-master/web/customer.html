@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <form action="/my-handling-form-page" method="post">
+
+        <body bgcolor="#00FFFF">
+            <center>
+                <h1>
+                    <p> <B><i>LeedsCoin Customer</i></B></p>
+                </h1>
+				<br></br>
+                <label for="name">Customer Id</label> : <i>0x6960F8F9b77A23b30F1e04350901A6426A72aFE9<i>
+				<br></br>
+				<br></br>
+                <div>
+                    <label for="msg">Use the following buttons <br></br></label>
+                </div>
+                <button onclick="contract.getBalance(2, console.log);" type="button"> Receive Token</button>
+                <br></br>
+                <br></br>
+                <button onclick="contract.getBalance(2, console.log);" type="button"> View Balance</button>
+                <br></br>
+                <br></br>
+                <button onclick="contract.transfer(to, 2, 9, console.log)" type="button"> Spend Token</button>
+                <br></br>
+                <br></br>
+                <button onclick="contract.transfer(prompt('Recipient address', friend), 2, 1, console.log);" type="button">
+                    Send to a Friend</button>
+            </center>
+    </form>
+</body>
+<script src="contract.js"></script>
+<script>
+    const to = "0x085298C6D1fE526CF7bFF02FDfaB86D8EAA1ae0B";
+    const friend = "0xFC7ad9704d54a0a119F0E493e90f86b3ED42c198";
+</script>
+
+</html>
